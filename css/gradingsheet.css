@@ -23,6 +23,14 @@
     background-color: rgba(0, 0, 0, 0.35);
 }
 
+.webpage-logo {
+    position: absolute;
+    width: 720px;
+    height: 175px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
 .logo-watermark-box {
     position: absolute;
     width: 750px;
@@ -49,7 +57,7 @@
     width: 750px;
     height: 408px;
     margin-left: 469.5px;
-    margin-top: 185.5px;
+    margin-top: 249.5px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 7.5px;
@@ -173,7 +181,7 @@ label {
     height: 508px;
     border-radius: 7.5px;
     margin-left: 417.5px;
-    margin-top: 130.5px;
+    margin-top: 194.5px;
     padding-left: 12.5px;
     padding-right: 12.5px;
     padding-top: 12.5px;

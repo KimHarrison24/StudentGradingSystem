@@ -326,7 +326,7 @@ function openMessageBox()
 
 function onloadEffect() 
 {
-    setTimeout(openMessageBox, 4500);
+    setTimeout(openMessageBox, 500);
 }
 
 function closeMessageBox()
