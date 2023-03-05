@@ -32,22 +32,22 @@
                             <div class="row g-2 mb-3">
                                 <div class="col-md-4">
                                     <label for="first-name" class="form-label">*First name:</label>
-                                    <input type="text" class="name-field" id="first-name" onfocus="focusMe(this)" onblur="blurMe(this)">
+                                    <input type="text" class="name-field" id="first-name" onfocus="focusMe(this)" onblur="blurMeTextValidation(this)">
                                 </div>
 
                                 <div class="col-md-4">
                                     <label for="middle-name" class="form-label">Middle name:</label>
-                                    <input type="text" class="name-field" id="middle-name" onfocus="focusMe(this)" onblur="blurMe(this)">
+                                    <input type="text" class="name-field" id="middle-name" onfocus="focusMe(this)" onblur="blurMeNotRequired(this)">
                                 </div>
 
                                 <div class="col-md-4">
                                     <label for="surname-name" class="form-label">*Last name:</label>
-                                    <input type="text" class="name-field" id="surname-name" onfocus="focusMe(this)" onblur="blurMe(this)">
+                                    <input type="text" class="name-field" id="surname-name" onfocus="focusMe(this)" onblur="blurMeTextValidation(this)">
                                 </div>
 
                                 <div class="col-md-4">
                                     <label for="batch-no" class="form-label">*Batch No.:</label>
-                                    <select class="batch-field" id="batch-no" onfocus="focusMe(this)" onblur="blurMe(this)">
+                                    <select class="batch-field" id="batch-no" onfocus="focusMe(this)" onblur="blurMeOptionValidation(this)">
                                         <option value="0">-</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -56,7 +56,7 @@
 
                                 <div class="col-md-4">
                                     <label for="course" class="form-label">*Course:</label>
-                                    <select class="course-field" id="course" onfocus="focusMe(this)" onblur="blurMe(this)">
+                                    <select class="course-field" id="course" onfocus="focusMe(this)" onblur="blurMeOptionValidation(this)">
                                         <option value="0">-</option>
                                         <option value="1">DICT</option>
                                         <option value="2">IT</option>
@@ -65,7 +65,7 @@
 
                                 <div class="col-md-4">
                                     <label for="section" class="form-label">*Section:</label>
-                                    <select class="section-field" id="section" onfocus="focusMe(this)" onblur="blurMe(this)">
+                                    <select class="section-field" id="section" onfocus="focusMe(this)" onblur="blurMeOptionValidation(this)">
                                         <option value="0">-</option>
                                         <option value="1">21M1</option> 
                                         <option value="2">21M2</option> 
@@ -84,7 +84,7 @@
 
                             <div class="row g-2 mb-3">
                                 <div class="col-12">
-                                    <select class="subject-field" id="subject" onfocus="focusMe(this)" onblur="blurMe(this)">
+                                    <select class="subject-field" id="subject" onfocus="focusMe(this)" onblur="blurMeOptionValidation(this)">
                                         <option value="0">-</option>
                                         <option value="1">Networking</option>
                                         <option value="2">Web System & Technologies</option> 
@@ -98,23 +98,23 @@
 
                                 <div class="col-md-4 mt-0">
                                     <label for="prelim" class="form-label">*Prelim:</label>
-                                   <input type="number" class="grade-field" id="prelim" placeholder="60 ~ 100" onfocus="focusMe(this)" onblur="blurMe(this)">
+                                   <input type="number" class="grade-field" id="prelim" placeholder="60 ~ 100" onfocus="focusMe(this)" onblur="blurMeRangeValidation(this)">
                                 </div>
 
                                 <div class="col-md-4 mt-0">
                                     <label for="midterm" class="form-label">*Mid-Term:</label>
-                                    <input type="number" class="grade-field" id="midterm" placeholder="60 ~ 100" onfocus="focusMe(this)" onblur="blurMe(this)">
+                                    <input type="number" class="grade-field" id="midterm" placeholder="60 ~ 100" onfocus="focusMe(this)" onblur="blurMeRangeValidation(this)">
                                 </div>
 
                                 <div class="col-md-4 mt-0">
                                     <label for="final" class="form-label">*Finals:</label>
-                                    <input type="number" class="grade-field" id="final" placeholder="60 ~ 100" onfocus="focusMe(this)" onblur="blurMe(this)">
+                                    <input type="number" class="grade-field" id="final" placeholder="60 ~ 100" onfocus="focusMe(this)" onblur="blurMeRangeValidation(this)">
                                 </div>
                             </div>
 
                         </fieldset>
 
-                        <center><button type="button" class="btn-lg mt-0 mb-2 getBtn" onclick="getResult()">Get Grade Result</button></center>
+                        <center><button type="button" id="btnMe" class="btn-lg mt-0 mb-2 getBtn" onclick="getResult()">Get Grade Result</button></center>
                     </div>
 
                     <div class="container-md position-absolute top-0 m-0 result-box" id="rBox" onclick="closeWindow()">

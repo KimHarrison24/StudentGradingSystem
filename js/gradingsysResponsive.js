@@ -1,3 +1,7 @@
+// Global Variable
+
+    const regEx = /^[a-zA-Z\s]+$/;
+
 // Function to get Grade Average, Scale(1-5) and Remarks and display it uisng result box
 
 function getAverage()
@@ -8,6 +12,10 @@ function getAverage()
     var mn = document.getElementById('middle-name').value;
     var sn = document.getElementById('surname-name').value;
 
+    var fnOnlytext = regEx.test(fn);
+    var mnOnlytext = regEx.test(mn);
+    var snOnlytext = regEx.test(sn);
+
     var course = document.getElementById('course').value;
     var section = document.getElementById('section').value;
 
@@ -17,9 +25,9 @@ function getAverage()
     var midterm = parseInt(document.getElementById('midterm').value);
     var final = parseInt(document.getElementById('final').value);
 
-    if(batch > 0 && !fn == "" && !sn == "" && course > 0 && section > 0 && sub > 0 && prelim > 0 && midterm > 0 && final > 0)
+    if(batch > 0 && fnOnlytext == true && (mn == "" || mnOnlytext == true) && snOnlytext == true && course > 0 && section > 0 && sub > 0 && prelim > 0 && midterm > 0 && final > 0)
     {
-        if(prelim < 101 && midterm < 101 && final < 101)
+        if(prelim > 59 && midterm > 59 && final > 59 && prelim < 101 && midterm < 101 && final < 101)
         {
             var course_meaning = "";
             var section_meaning = "";
@@ -216,13 +224,13 @@ function getAverage()
 
         else
         {
-            alert("Term Grades must be Lower or Equal to 100!");    
+            alert("Term Grades must be Higher than 59 and Lower than 101!");    
         }
     }
 
     else
     {
-        alert("All Input Fields with '*' Must Have Values!");
+        alert("Required '*' or Non Required Input Fields Must Have Valid Values!");
     }
 }
 
@@ -332,11 +340,6 @@ function onloadEffect()
     setTimeout(openMessageBox, 500);
 }
 
-function closeMessageBox()
-{
-    document.getElementById('wMes-box').style.display = "none";
-}
-
 // Function for Focus and Blur change bg-color
 
 function focusMe(myself)
@@ -345,10 +348,70 @@ function focusMe(myself)
     myself.style.boxShadow = "0px 1px 5px black";
 }
 
-function blurMe(myself)
+function blurMeTextValidation(myself)
 {
-    myself.style.backgroundColor = "rgba(230, 230, 250, 0.85)";
-    myself.style.boxShadow = "none";
+    var value = myself.value;
+    var textOnly = regEx.test(value);
+        
+    if(textOnly == false)
+    {
+        myself.style.boxShadow = "0px 1px 5px red";
+    }
+
+    else
+    {
+        myself.style.backgroundColor = "rgba(230, 230, 250, 0.85)";
+        myself.style.boxShadow = "none";
+    }
+}
+
+function blurMeRangeValidation(myself)
+{
+    var value = myself.value;
+        
+    if(value < 60 || value > 100)
+    {
+        myself.style.boxShadow = "0px 1px 5px red";
+    }
+
+    else
+    {
+        myself.style.backgroundColor = "rgba(230, 230, 250, 0.85)";
+        myself.style.boxShadow = "none";
+    }
+}
+
+function blurMeOptionValidation(myself)
+{
+    var value = myself.value;
+        
+    if(value == 0)
+    {
+        myself.style.boxShadow = "0px 1px 5px red";
+    }
+
+    else
+    {
+        myself.style.backgroundColor = "rgba(230, 230, 250, 0.85)";
+        myself.style.boxShadow = "none";
+    }
+}
+
+function blurMeNotRequired(myself)
+{
+    var value = myself.value;
+    var textOnly = regEx.test(value);
+        
+    if(textOnly == false && !value == '')
+    {
+        myself.style.boxShadow = "0px 1px 5px red";
+    }
+
+    else
+    {
+        myself.style.backgroundColor = "rgba(230, 230, 250, 0.85)";
+        myself.style.boxShadow = "none";
+    }
 }
 
 // Design Checking for Result Box
