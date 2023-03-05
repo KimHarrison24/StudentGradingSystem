@@ -252,12 +252,12 @@ function clickAnywhereMessage()
 
 function loadingEffectOn()
 {
-    document.getElementById("loading-icon").style.display = "block";
+    document.getElementById("loading-icon").style.display = "flex";
 }
 
 function graphLoadingEffectOn()
 {
-    document.getElementById("graph-loading-icon").style.display = "block";
+    document.getElementById("graph-loading-icon").style.display = "flex";
 }
 
 // Function to hide loading icon
@@ -321,7 +321,10 @@ function closeWindow()
 
 function openMessageBox()
 {
-    document.getElementById('wMes-box').style.display = "block";
+    var myModal = new bootstrap.Modal(document.getElementById('wMes-box'), {
+        keyboard: false
+      });
+      myModal.toggle()
 }
 
 function onloadEffect() 

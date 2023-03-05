@@ -91,7 +91,7 @@ label {
     height: 25.5px;
     text-align: center;
     border-radius: 5px;
-    margin-left: 34px;
+    margin-left: 29px;
     margin-top: 10px;
     margin-bottom: 5px;
     background-color: rgba(230, 230, 250, 0.85);
@@ -108,11 +108,11 @@ label {
 
 .course-field {
     cursor: pointer;
-    width: 195.5px;
+    width: 193.5px;
     height: 25.5px;
     text-align: center;
     border-radius: 5px;
-    margin-left: 54px;
+    margin-left: 49px;
     margin-right: 78.5px;
     margin-bottom: 15px;
     background-color: rgba(230, 230, 250, 0.85);
@@ -120,11 +120,11 @@ label {
 
 .section-field {
     cursor: pointer;
-    width: 195.5px;
+    width: 194.5px;
     height: 25.5px;
     text-align: center;
     border-radius: 5px;
-    margin-left: 54px;
+    margin-left: 49px;
     margin-bottom: 15px;
     background-color: rgba(230, 230, 250, 0.85);
 }
